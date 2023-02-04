@@ -530,28 +530,57 @@
 <p>本文编写于 2023/02/03 9:45 (CTS)</p>
 <p>本文更新于 2023/02/03 9:45 (CTS)</p>
 </blockquote>
-<p>```cpp
-int a,b;</p>
-<p>void setup() {
-  // put your setup code here, to run once:
-  pinMode(9, OUTPUT);// trig
-  pinMode(10, INPUT);// echo
-  Serial.begin(9600);
-}</p>
-<p>void loop() {
-  // put your main code here, to run repeatedly:
-  delayMicroseconds(10);</p>
-<p>digitalWrite(9,HIGH);
-  delayMicroseconds(10);
-  digitalWrite(9,LOW);</p>
-<p>delayMicroseconds(1); <br />
-  a=pulseIn(10,HIGH);
-  b=a*340/2;</p>
-<p>Serial.print(a);
-  Serial.print(" ");
-  Serial.println(b);
-}</p>
-<p>```<script src="https://giscus.app/client.js"
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// put your setup code here, to run once:</span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span><span class="c1">// trig</span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT</span><span class="p">);</span><span class="c1">// echo</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// put your main code here, to run repeatedly:</span>
+<span class="w">  </span><span class="n">delayMicroseconds</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span>
+<span class="w">  </span><span class="n">delayMicroseconds</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="n">LOW</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">delayMicroseconds</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w">   </span>
+<span class="w">  </span><span class="n">a</span><span class="o">=</span><span class="n">pulseIn</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span>
+<span class="w">  </span><span class="n">b</span><span class="o">=</span><span class="n">a</span><span class="o">*</span><span class="mi">340</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
+
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">b</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<script src="https://giscus.app/client.js"
     data-repo="liuzihaohao/liuzihaohao.github.io"
     data-repo-id="R_kgDOI3HDkw"
     data-category="Announcements"
@@ -566,7 +595,7 @@ int a,b;</p>
     data-loading="lazy"
     crossorigin="anonymous"
     async>
-</script></p>
+</script>
 
 
 

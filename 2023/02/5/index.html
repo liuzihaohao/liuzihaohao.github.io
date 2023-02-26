@@ -13,17 +13,13 @@
       
       
       
-        <link rel="prev" href="../3/">
-      
-      
-        <link rel="next" href="../1/">
       
       <link rel="icon" href="../../../icon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.14">
     
     
       
-        <title>python 模拟抛硬币概率 - Lzh's Blog</title>
+        <title>P1028 数的计算 题解 - Lzh's Blog</title>
       
     
     
@@ -116,7 +112,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#python-模拟抛硬币概率" class="md-skip">
+        <a href="#p1028-数的计算-题解" class="md-skip">
           跳转至
         </a>
       
@@ -149,7 +145,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              python 模拟抛硬币概率
+              P1028 数的计算 题解
             
           </span>
         </div>
@@ -249,8 +245,6 @@
         
   
   
-    
-  
 
 
   
@@ -262,7 +256,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../4/" class="md-tabs__link md-tabs__link--active">
+      <a href="../4/" class="md-tabs__link">
         2023
       </a>
     </li>
@@ -324,16 +318,14 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
       
       
       
@@ -342,7 +334,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           2023
@@ -353,16 +345,14 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
       
       
       
@@ -371,7 +361,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_1">
           <span class="md-nav__icon md-icon"></span>
           02
@@ -410,21 +400,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../2/" class="md-nav__link">
         python 模拟抛硬币概率
       </a>
-      
     </li>
   
 
@@ -553,6 +533,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#题目链接-p1028-noip2001-普及组-数的计算" class="md-nav__link">
+    题目链接 P1028 [NOIP2001 普及组] 数的计算
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#完整代码" class="md-nav__link">
+    完整代码
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -566,11 +568,13 @@
                   
 
 
-<h1 id="python-模拟抛硬币概率">python 模拟抛硬币概率<a class="headerlink" href="#python-模拟抛硬币概率" title="Permanent link"></a></h1>
+<h1 id="p1028-数的计算-题解">P1028 数的计算 题解<a class="headerlink" href="#p1028-数的计算-题解" title="Permanent link"></a></h1>
 <blockquote>
-<p>本文编写于 2023/02/03 10:45 (CTS)</p>
-<p>本文更新于 2023/02/03 10:45 (CTS)</p>
+<p>本文编写于 2023/02/26 12:19 (CTS)</p>
+<p>本文更新于 2023/02/26 12:19 (CTS)</p>
 </blockquote>
+<h2 id="题目链接-p1028-noip2001-普及组-数的计算">题目链接 <a href="https://www.luogu.com.cn/problem/P1028">P1028 [NOIP2001 普及组] 数的计算</a><a class="headerlink" href="#题目链接-p1028-noip2001-普及组-数的计算" title="Permanent link"></a></h2>
+<h2 id="完整代码">完整代码<a class="headerlink" href="#完整代码" title="Permanent link"></a></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -586,46 +590,22 @@
 <span class="normal">13</span>
 <span class="normal">14</span>
 <span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
-<span class="kn">from</span> <span class="nn">uuid</span> <span class="kn">import</span> <span class="n">uuid4</span>
-<span class="k">def</span> <span class="nf">rnum</span><span class="p">():</span>
-    <span class="k">return</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">x</span><span class="o">=</span><span class="p">[]</span>
-<span class="n">y</span><span class="o">=</span><span class="p">[]</span>
-<span class="n">z</span><span class="o">=</span><span class="p">[]</span>
-<span class="n">n</span><span class="o">=</span><span class="mi">0</span>
-<span class="n">ys</span><span class="o">=</span><span class="mi">0</span>
-<span class="n">zs</span><span class="o">=</span><span class="mi">0</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000000</span><span class="p">):</span>
-    <span class="n">n</span><span class="o">=</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span>
-    <span class="k">if</span> <span class="n">rnum</span><span class="p">()</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
-        <span class="n">zs</span><span class="o">=</span><span class="n">zs</span><span class="o">+</span><span class="mi">1</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">ys</span><span class="o">=</span><span class="n">ys</span><span class="o">+</span><span class="mi">1</span>
-    <span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-    <span class="n">y</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ys</span><span class="o">/</span><span class="n">n</span><span class="p">)</span>
-    <span class="n">z</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">zs</span><span class="o">/</span><span class="n">n</span><span class="p">)</span>
-<span class="c1"># print(x,y)</span>
-<span class="n">l1</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">)</span>
-<span class="n">l2</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,[</span><span class="mf">0.5</span><span class="p">]</span><span class="o">*</span><span class="mi">1000000</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">handles</span><span class="o">=</span><span class="p">[</span><span class="n">l1</span><span class="p">,</span> <span class="n">l2</span><span class="p">],</span> <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;P(A)&#39;</span><span class="p">,</span> <span class="s1">&#39;0.5&#39;</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-<span class="c1"># plt.savefig(str(uuid4())+&#39;.jpg&#39;)</span>
-<span class="c1"># plt.clf()</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">e</span><span class="p">[</span><span class="mi">1111</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">t</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">t</span><span class="p">;</span>
+<span class="w">    </span><span class="n">e</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">t</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">        </span><span class="n">e</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">e</span><span class="p">[</span><span class="n">i</span><span class="mi">-1</span><span class="p">];</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">){</span>
+<span class="w">            </span><span class="n">e</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+=</span><span class="n">e</span><span class="p">[</span><span class="n">i</span><span class="o">/</span><span class="mi">2</span><span class="p">];</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">e</span><span class="p">[</span><span class="n">t</span><span class="p">];</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span>
 </code></pre></div></td></tr></table></div>
 <script src="https://giscus.app/client.js"
     data-repo="liuzihaohao/liuzihaohao.github.io"

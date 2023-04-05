@@ -13,17 +13,17 @@
       
       
       
-        <link rel="prev" href="../3/">
+        <link rel="prev" href="../../..">
       
       
-        <link rel="next" href="../1/">
+        <link rel="next" href="../5/">
       
       <link rel="icon" href="../../../icon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.5">
     
     
       
-        <title>Python模拟抛硬币实验 - Lzh's Blog</title>
+        <title>Pyth0n倒计时程序 - Lzh's Blog</title>
       
     
     
@@ -116,7 +116,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#python模拟抛硬币实验" class="md-skip">
+        <a href="#pyth0n倒计时程序" class="md-skip">
           跳转至
         </a>
       
@@ -149,7 +149,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Python模拟抛硬币实验
+              Pyth0n倒计时程序
             
           </span>
         </div>
@@ -262,7 +262,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../6/" class="md-tabs__link md-tabs__link--active">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
         2023
       </a>
     </li>
@@ -382,11 +382,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../6/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Pyth0n倒计时程序
       </a>
+      
     </li>
   
 
@@ -438,21 +448,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../2/" class="md-nav__link">
         Python模拟抛硬币实验
       </a>
-      
     </li>
   
 
@@ -760,9 +760,9 @@
                   
 
 
-<h1 id="python模拟抛硬币实验">Python模拟抛硬币实验<a class="headerlink" href="#python模拟抛硬币实验" title="Permanent link"></a></h1>
+<h1 id="pyth0n倒计时程序">Pyth0n倒计时程序<a class="headerlink" href="#pyth0n倒计时程序" title="Permanent link"></a></h1>
 <blockquote>
-<p>本文编写于 2023/04/02 (CTS)</p>
+<p>本文编写于 2023/04/06 (CTS)</p>
 </blockquote>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -792,35 +792,93 @@
 <span class="normal">26</span>
 <span class="normal">27</span>
 <span class="normal">28</span>
-<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
-<span class="kn">from</span> <span class="nn">uuid</span> <span class="kn">import</span> <span class="n">uuid4</span>
-<span class="k">def</span> <span class="nf">rnum</span><span class="p">():</span>
-    <span class="k">return</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">x</span><span class="o">=</span><span class="p">[]</span>
-<span class="n">y</span><span class="o">=</span><span class="p">[]</span>
-<span class="n">z</span><span class="o">=</span><span class="p">[]</span>
-<span class="n">n</span><span class="o">=</span><span class="mi">0</span>
-<span class="n">ys</span><span class="o">=</span><span class="mi">0</span>
-<span class="n">zs</span><span class="o">=</span><span class="mi">0</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000000</span><span class="p">):</span>
-    <span class="n">n</span><span class="o">=</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span>
-    <span class="k">if</span> <span class="n">rnum</span><span class="p">()</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
-        <span class="n">zs</span><span class="o">=</span><span class="n">zs</span><span class="o">+</span><span class="mi">1</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">ys</span><span class="o">=</span><span class="n">ys</span><span class="o">+</span><span class="mi">1</span>
-    <span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-    <span class="n">y</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ys</span><span class="o">/</span><span class="n">n</span><span class="p">)</span>
-    <span class="n">z</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">zs</span><span class="o">/</span><span class="n">n</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
-<span class="n">l1</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">)</span>
-<span class="n">l2</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,[</span><span class="mf">0.5</span><span class="p">]</span><span class="o">*</span><span class="mi">1000000</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">handles</span><span class="o">=</span><span class="p">[</span><span class="n">l1</span><span class="p">,</span> <span class="n">l2</span><span class="p">],</span> <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;P(A)&#39;</span><span class="p">,</span> <span class="s1">&#39;0.5&#39;</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">tkinter</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">tkinter.messagebox</span>
 
-<span class="c1"># plt.savefig(&#39;./&#39;+str(uuid4())+&#39;.jpg&#39;)</span>
-<span class="c1"># plt.clf()</span>
+<span class="k">class</span> <span class="nc">App</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">master</span><span class="p">):</span>
+        <span class="n">frame</span> <span class="o">=</span> <span class="n">Frame</span><span class="p">(</span><span class="n">master</span><span class="p">)</span>
+        <span class="n">frame</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">entryWidget</span> <span class="o">=</span> <span class="n">Entry</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">entryWidget</span><span class="p">[</span><span class="s2">&quot;width&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">50</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">entryWidget</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">LEFT</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hi_there</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;开始&quot;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">start</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hi_there</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">LEFT</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">entryWidget</span><span class="o">.</span><span class="n">get</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="n">root</span><span class="o">.</span><span class="n">attributes</span><span class="p">(</span><span class="s1">&#39;-fullscreen&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hi_there</span><span class="o">.</span><span class="n">pack_forget</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">entryWidget</span><span class="o">.</span><span class="n">pack_forget</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">countDown</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">text</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">countDown</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">seconds</span><span class="p">):</span>
+        <span class="n">lbl1</span><span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="n">bg</span><span class="o">=</span><span class="s1">&#39;yellow&#39;</span><span class="p">)</span>
+        <span class="n">lbl1</span><span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;times&#39;</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="s1">&#39;bold&#39;</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">seconds</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+         <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="mi">30</span><span class="p">:</span>
+          <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\a</span><span class="s2">&quot;</span><span class="p">)</span>
+         <span class="k">if</span> <span class="n">k</span><span class="o">==</span> <span class="mi">29</span><span class="p">:</span>
+          <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\a</span><span class="s2">&quot;</span><span class="p">)</span>
+         <span class="k">if</span> <span class="n">k</span><span class="o">==</span> <span class="mi">28</span><span class="p">:</span>
+          <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\a</span><span class="s2">&quot;</span><span class="p">)</span>
+         <span class="n">lbl1</span><span class="p">[</span><span class="s2">&quot;text&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">k</span>
+         <span class="n">root</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+         <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">lbl1</span><span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="n">bg</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+        <span class="n">lbl1</span><span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="n">fg</span><span class="o">=</span><span class="s1">&#39;#000000&#39;</span><span class="p">)</span>
+        <span class="n">lbl1</span><span class="p">[</span><span class="s2">&quot;text&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="n">tkinter</span><span class="o">.</span><span class="n">messagebox</span><span class="o">.</span><span class="n">showinfo</span><span class="p">(</span><span class="s2">&quot;结束&quot;</span><span class="p">,</span><span class="s2">&quot;结束&quot;</span><span class="p">)</span>
+        <span class="n">root</span><span class="o">.</span><span class="n">attributes</span><span class="p">(</span><span class="s1">&#39;-fullscreen&#39;</span><span class="p">,</span> <span class="n">F</span><span class="p">)</span>
+        <span class="n">root</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+
+        <span class="k">def</span> <span class="nf">GetSource</span><span class="p">():</span>
+          <span class="n">get_window</span> <span class="o">=</span> <span class="n">Tkinter</span><span class="o">.</span><span class="n">Toplevel</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
+          <span class="n">get_window</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Source File?&#39;</span><span class="p">)</span>
+          <span class="n">Tkinter</span><span class="o">.</span><span class="n">Entry</span><span class="p">(</span><span class="n">get_window</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+              <span class="n">textvariable</span><span class="o">=</span><span class="n">source</span><span class="p">)</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+          <span class="n">Tkinter</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">get_window</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Change&quot;</span><span class="p">,</span>
+              <span class="n">command</span><span class="o">=</span><span class="k">lambda</span><span class="p">:</span> <span class="n">update_specs</span><span class="p">())</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">key</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
+    <span class="n">root</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+
+<span class="n">root</span> <span class="o">=</span> <span class="n">Tk</span><span class="p">()</span>
+<span class="n">root</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="n">lbl1</span> <span class="o">=</span> <span class="n">Label</span><span class="p">()</span>
+<span class="n">lbl1</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">fill</span><span class="o">=</span><span class="n">BOTH</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">App</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
+<span class="n">root</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="s2">&quot;&lt;Escape&gt;&quot;</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+<span class="n">root</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
 <script src="https://giscus.app/client.js"
     data-repo="liuzihaohao/liuzihaohao.github.io"

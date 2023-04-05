@@ -13,13 +13,17 @@
       
       
       
+        <link rel="prev" href="../3/">
+      
+      
+        <link rel="next" href="../1/">
       
       <link rel="icon" href="../../../icon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.5">
     
     
       
-        <title>KMP算法模板 - Lzh's Blog</title>
+        <title>Python模拟抛硬币实验 - Lzh's Blog</title>
       
     
     
@@ -112,7 +116,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#kmp算法模板" class="md-skip">
+        <a href="#python模拟抛硬币实验" class="md-skip">
           跳转至
         </a>
       
@@ -145,7 +149,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              KMP算法模板
+              Python模拟抛硬币实验
             
           </span>
         </div>
@@ -245,6 +249,8 @@
         
   
   
+    
+  
 
 
   
@@ -256,7 +262,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../1/" class="md-tabs__link">
+      <a href="../5/" class="md-tabs__link md-tabs__link--active">
         2023
       </a>
     </li>
@@ -318,14 +324,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
       
       
       
@@ -334,7 +342,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           2023
@@ -345,14 +353,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
       
       
       
@@ -361,12 +371,78 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2_1">
           <span class="md-nav__icon md-icon"></span>
           04
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5/" class="md-nav__link">
+        Python数字炸弹游戏
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4/" class="md-nav__link">
+        Python局域网通信小工具
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3/" class="md-nav__link">
+        Python删除文件
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Python模拟抛硬币实验
+      </a>
+      
+    </li>
+  
+
+            
           
             
               
@@ -670,10 +746,9 @@
                   
 
 
-<h1 id="kmp算法模板">KMP算法模板<a class="headerlink" href="#kmp算法模板" title="Permanent link"></a></h1>
+<h1 id="python模拟抛硬币实验">Python模拟抛硬币实验<a class="headerlink" href="#python模拟抛硬币实验" title="Permanent link"></a></h1>
 <blockquote>
-<p>本文编写于 2023/04/03 (CTS)</p>
-<p>本文更新于 2023/04/03 (CTS)</p>
+<p>本文编写于 2023/04/02 (CTS)</p>
 </blockquote>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -703,39 +778,35 @@
 <span class="normal">26</span>
 <span class="normal">27</span>
 <span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">#include</span><span class="cpf">&lt;cstdio&gt;</span>
-<span class="cp">#include</span><span class="cpf">&lt;cstring&gt;</span>
-<span class="cp">#include</span><span class="cpf">&lt;algorithm&gt;</span>
-<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
-<span class="kt">char</span><span class="w"> </span><span class="n">T</span><span class="p">[</span><span class="mi">1000006</span><span class="p">],</span><span class="n">S</span><span class="p">[</span><span class="mi">1000006</span><span class="p">];</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">nx</span><span class="p">[</span><span class="mi">1000006</span><span class="p">];</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">getnx</span><span class="p">()</span>
-<span class="p">{</span><span class="w">   </span><span class="n">nx</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">nx</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span><span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">p</span><span class="o">=</span><span class="n">nx</span><span class="p">[</span><span class="n">i</span><span class="mi">-1</span><span class="p">];</span>
-<span class="w">        </span><span class="k">while</span><span class="p">(</span><span class="n">p</span><span class="o">&amp;&amp;</span><span class="n">S</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">!=</span><span class="n">S</span><span class="p">[</span><span class="n">p</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span><span class="n">p</span><span class="o">=</span><span class="n">nx</span><span class="p">[</span><span class="n">p</span><span class="p">];</span>
-<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">S</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="n">S</span><span class="p">[</span><span class="n">p</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span><span class="n">nx</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">p</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
-<span class="w">            </span><span class="k">else</span><span class="w"> </span><span class="n">nx</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span><span class="w">   </span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span><span class="n">T</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
-<span class="w">    </span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span><span class="n">S</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
-<span class="w">    </span><span class="n">m</span><span class="o">=</span><span class="n">strlen</span><span class="p">(</span><span class="n">T</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span><span class="n">n</span><span class="o">=</span><span class="n">strlen</span><span class="p">(</span><span class="n">S</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
-<span class="w">    </span><span class="n">getnx</span><span class="p">();</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">p</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">m</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span><span class="w">   </span><span class="k">while</span><span class="p">(</span><span class="n">p</span><span class="o">&amp;&amp;</span><span class="n">T</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">!=</span><span class="n">S</span><span class="p">[</span><span class="n">p</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span><span class="n">p</span><span class="o">=</span><span class="n">nx</span><span class="p">[</span><span class="n">p</span><span class="p">];</span>
-<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">T</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="n">S</span><span class="p">[</span><span class="n">p</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span><span class="o">++</span><span class="n">p</span><span class="p">;</span>
-<span class="w">            </span><span class="k">else</span><span class="w"> </span><span class="n">p</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">p</span><span class="o">==</span><span class="n">n</span><span class="p">)</span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">i</span><span class="o">-</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span><span class="n">p</span><span class="o">=</span><span class="n">nx</span><span class="p">[</span><span class="n">p</span><span class="p">];</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d &quot;</span><span class="p">,</span><span class="n">nx</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
-<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+<span class="kn">from</span> <span class="nn">uuid</span> <span class="kn">import</span> <span class="n">uuid4</span>
+<span class="k">def</span> <span class="nf">rnum</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">x</span><span class="o">=</span><span class="p">[]</span>
+<span class="n">y</span><span class="o">=</span><span class="p">[]</span>
+<span class="n">z</span><span class="o">=</span><span class="p">[]</span>
+<span class="n">n</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">ys</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">zs</span><span class="o">=</span><span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000000</span><span class="p">):</span>
+    <span class="n">n</span><span class="o">=</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span>
+    <span class="k">if</span> <span class="n">rnum</span><span class="p">()</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+        <span class="n">zs</span><span class="o">=</span><span class="n">zs</span><span class="o">+</span><span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">ys</span><span class="o">=</span><span class="n">ys</span><span class="o">+</span><span class="mi">1</span>
+    <span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">y</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ys</span><span class="o">/</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">z</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">zs</span><span class="o">/</span><span class="n">n</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="n">l1</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">)</span>
+<span class="n">l2</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,[</span><span class="mf">0.5</span><span class="p">]</span><span class="o">*</span><span class="mi">1000000</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">handles</span><span class="o">=</span><span class="p">[</span><span class="n">l1</span><span class="p">,</span> <span class="n">l2</span><span class="p">],</span> <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;P(A)&#39;</span><span class="p">,</span> <span class="s1">&#39;0.5&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># plt.savefig(&#39;./&#39;+str(uuid4())+&#39;.jpg&#39;)</span>
+<span class="c1"># plt.clf()</span>
 </code></pre></div></td></tr></table></div>
 <script src="https://giscus.app/client.js"
     data-repo="liuzihaohao/liuzihaohao.github.io"

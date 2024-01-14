@@ -2,41 +2,41 @@ site_name: Lzh's Blog
 site_url: null
 site_description: Lzh's Blog
 site_author: lzh
-copyright: "Copyright © 2019 - 2023 Lzh's Blog 许可协议: CC BY-NC-ND 4.0"
+copyright: "Copyright &copy; 2019 - 2024 Lzh's Blog 许可协议: CC BY-NC-ND 4.0"
 
 nav:
   - index.md
   - "2023":
     - "12":
-      - 2023/12/1.md
+      - blog/2023/12/1.md
     - "07":
-      - 2023/07/1.md
+      - blog/2023/07/1.md
     - "06":
-      - 2023/06/1.md
+      - blog/2023/06/1.md
     - "05":
-      - 2023/05/2.md
-      - 2023/05/1.md
+      - blog/2023/05/2.md
+      - blog/2023/05/1.md
     - "04":
-      - 2023/04/7.md
-      - 2023/04/6.md
-      - 2023/04/5.md
-      - 2023/04/4.md
-      - 2023/04/3.md
-      - 2023/04/2.md
-      - 2023/04/1.md
+      - blog/2023/04/7.md
+      - blog/2023/04/6.md
+      - blog/2023/04/5.md
+      - blog/2023/04/4.md
+      - blog/2023/04/3.md
+      - blog/2023/04/2.md
+      - blog/2023/04/1.md
     - "03":
-      - 2023/03/2.md
-      - 2023/03/1.md
+      - blog/2023/03/2.md
+      - blog/2023/03/1.md
     - "02":
-      - 2023/02/5.md
-      - 2023/02/4.md
-      - 2023/02/3.md
-      - 2023/02/2.md
-      - 2023/02/1.md
+      - blog/2023/02/5.md
+      - blog/2023/02/4.md
+      - blog/2023/02/3.md
+      - blog/2023/02/2.md
+      - blog/2023/02/1.md
     - "01":
-      - 2023/01/3.md
-      - 2023/01/2.md
-      - 2023/01/1.md
+      - blog/2023/01/3.md
+      - blog/2023/01/2.md
+      - blog/2023/01/1.md
 
 extra:
   disqus: 'someting'
@@ -91,7 +91,22 @@ theme:
       quote: octicons/quote-16
   features:
     - navigation.tabs
-    - navigation.instant
+    # - navigation.instant # 瞬间加载
+    # 代码块
+    - content.code.copy
+    # - content.code.annotate 
+
+    #- navigation.instant # 点击内部链接时，不用全部刷新页面
+    - navigation.tracking # 在url中使用标题定位锚点
+    - navigation.tabs # 顶部显示导航顶层nav（也就是第一个节点）
+    - navigation.tabs.sticky # 滚动是隐藏顶部nav，需要配合navigation.tabs使用
+    - navigation.sections # nav节点缩进
+    # - navigation.expand # 不折叠左侧nav节点
+    - navigation.indexes # 指定节点index pages ，跟instant不兼容
+    - toc.integrate # 右侧生产目录
+    - navigation.top # 一键回顶部
+    - header.autohide
+  custom_dir: overrides  # 自定义主题设置。overrides目录与docs目录同级
   font:
     text: 'Fira Sans'
     code: 'Fira Mono'
@@ -102,41 +117,79 @@ theme:
 
 # Extensions
 markdown_extensions:
-  - admonition
-  - def_list
-  - footnotes
-  - meta
-  - toc:
-      permalink: ""
-      slugify: !!python/name:pymdownx.slugs.uslugify
-  - pymdownx.arithmatex:
-      generic: true
-  - pymdownx.caret
-  - pymdownx.critic
-  - pymdownx.details
-  - pymdownx.emoji:
-      emoji_generator: !!python/name:pymdownx.emoji.to_svg
-  - pymdownx.highlight:
-      linenums: true
-  - pymdownx.inlinehilite
-  - pymdownx.keys
-  - pymdownx.magiclink
-  - pymdownx.mark
+  # 术语提示
+  - abbr
   - pymdownx.snippets
-  - pymdownx.progressbar
-  - pymdownx.smartsymbols
+  # 提示 警告框
+  - admonition
+  - pymdownx.details
   - pymdownx.superfences:
       custom_fences:
         - name: math
           class: arithmatex
           format: !!python/name:pymdownx.arithmatex.fence_mathjax_format
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - pymdownx.tilde
+  # 按钮
+  - attr_list
+  # 代码块
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  # 内容标签页
   - pymdownx.tabbed:
       alternate_style: true
-  - pymdownx.superfences
+  
+  - tables # 表格
+  - footnotes # 注脚
+
+  # 格式化处理
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+
+  # 图片
+  - attr_list
+  - md_in_html
+
+  # 列表
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  
+  # emoji
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  
+  - meta # metadata
+  - toc:
+      permalink: ""
+      slugify: !!python/name:pymdownx.slugs.uslugify
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.magiclink # 自动识别链接
+  - pymdownx.progressbar
+  - pymdownx.smartsymbols # 智能符号
 
 extra_javascript:
+  - javascripts/extra.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
 
+extra_css:
+    - stylesheets/extra.css
+
+plugins:
+  - git-revision-date-localized:
+      type: datetime
+      custom_format: "%d. %B %Y"
+      timezone: Asia/Shanghai
+      locale: ZH
+      # fallback_to_build_date: false
+      enable_creation_date: true
+      exclude:
+          - index.md
+      enabled: true
+      strict: true
+  - tags

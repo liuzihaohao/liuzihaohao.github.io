@@ -1,4 +1,6 @@
 name: Deploy to Github Pages
+env:
+TZ: Asia/Shanghai
 on:
   push:
     branches:
@@ -8,11 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
-      - run: pip install mkdocs-material
-      - run: python3 ./scripts/giscus.py
+      - run: pip install mkdocs-material mkdocs-git-revision-date-localized-plugin
       - run: mkdocs build
       - uses: peaceiris/actions-gh-pages@v3
         with:

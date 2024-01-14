@@ -1,6 +1,6 @@
 name: Deploy to Github Pages
 env:
-TZ: Asia/Shanghai
+  TZ: Asia/Shanghai
 on:
   push:
     branches:

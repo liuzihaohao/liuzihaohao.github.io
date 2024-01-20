@@ -1,3 +1,5 @@
+docs/static/2024/PEP/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

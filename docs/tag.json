@@ -1,6 +1,61 @@
 [
     {
-        "TagName": "2023",
+        "TagName": "年度总结",
+        "background": "cornflowerblue",
+        "color": "black"
+    },
+    {
+        "TagName": "信息学",
+        "background": "cornflowerblue",
+        "color": "black"
+    },
+    {
+        "TagName": "项目作品",
+        "background": "cornflowerblue",
+        "color": "black"
+    },
+    {
+        "TagName": "Arduino",
+        "background": "cornflowerblue",
+        "color": "black"
+    },
+    {
+        "TagName": "硬件开发",
+        "background": "cornflowerblue",
+        "color": "black"
+    },
+    {
+        "TagName": "运维",
+        "background": "cornflowerblue",
+        "color": "black"
+    },
+    {
+        "TagName": "化学",
+        "background": "cornflowerblue",
+        "color": "black"
+    },
+    {
+        "TagName": "学习-Old",
+        "background": "cornflowerblue",
+        "color": "black"
+    },
+    {
+        "TagName": "小型编程练习",
+        "background": "cornflowerblue",
+        "color": "black"
+    },
+    {
+        "TagName": "Python",
+        "background": "cornflowerblue",
+        "color": "black"
+    },
+    {
+        "TagName": "前端",
+        "background": "cornflowerblue",
+        "color": "black"
+    },
+    {
+        "TagName": "Django",
         "background": "cornflowerblue",
         "color": "black"
     }

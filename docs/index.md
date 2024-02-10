@@ -16,22 +16,3 @@
 >
 > “他们可能半途离去，也可能走得比你更远，但都有一个同样微不足道的开始。”
 
-
-
-
-<script src="https://giscus.app/client.js"
-    data-repo="liuzihaohao/liuzihaohao.github.io"
-    data-repo-id="R_kgDOI3HDkw"
-    data-category="Announcements"
-    data-category-id="DIC_kwDOI3HDk84CT4T2"
-    data-mapping="pathname"
-    data-strict="1"
-    data-reactions-enabled="1"
-    data-emit-metadata="0"
-    data-input-position="top"
-    data-theme="preferred_color_scheme"
-    data-lang="zh-CN"
-    data-loading="lazy"
-    crossorigin="anonymous"
-    async>
-</script>

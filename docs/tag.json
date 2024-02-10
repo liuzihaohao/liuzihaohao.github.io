@@ -1,62 +1,67 @@
 [
     {
         "TagName": "年度总结",
-        "background": "cornflowerblue",
+        "background": "#3ab74f",
         "color": "black"
     },
     {
         "TagName": "信息学",
-        "background": "cornflowerblue",
+        "background": "#673AB7",
         "color": "black"
     },
     {
         "TagName": "项目作品",
-        "background": "cornflowerblue",
+        "background": "#3a66b7",
         "color": "black"
     },
     {
         "TagName": "Arduino",
-        "background": "cornflowerblue",
+        "background": "#b73a3a",
         "color": "black"
     },
     {
         "TagName": "硬件开发",
-        "background": "cornflowerblue",
+        "background": "#b7b53a",
         "color": "black"
     },
     {
         "TagName": "运维",
-        "background": "cornflowerblue",
+        "background": "#b77d3a",
         "color": "black"
     },
     {
         "TagName": "化学",
-        "background": "cornflowerblue",
+        "background": "#b73a9c",
         "color": "black"
     },
     {
         "TagName": "学习-Old",
-        "background": "cornflowerblue",
+        "background": "aquamarine",
         "color": "black"
     },
     {
         "TagName": "小型编程练习",
-        "background": "cornflowerblue",
+        "background": "chartreuse",
         "color": "black"
     },
     {
         "TagName": "Python",
-        "background": "cornflowerblue",
+        "background": "darkorange",
         "color": "black"
     },
     {
         "TagName": "前端",
-        "background": "cornflowerblue",
+        "background": "lightsalmon",
         "color": "black"
     },
     {
         "TagName": "Django",
-        "background": "cornflowerblue",
+        "background": "sienna",
+        "color": "black"
+    },
+    {
+        "TagName": "回忆录-2023",
+        "background": "chartreuse",
         "color": "black"
     }
 ]

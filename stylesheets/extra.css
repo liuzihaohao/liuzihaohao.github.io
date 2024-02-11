@@ -16,3 +16,13 @@
     position: relative;
 }
 /* 图片放大end*/
+
+main {
+    margin-bottom: 64px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}

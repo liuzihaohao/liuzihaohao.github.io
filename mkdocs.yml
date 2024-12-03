@@ -2,19 +2,22 @@ site_name: Lzh's Blog
 site_url: null
 site_description: Lzh's Blog
 site_author: lzh
-copyright: "Copyright &copy; 2019 - 2024 Lzh's Blog 许可协议: CC BY-NC-ND 4.0"
+copyright: "Copyright &copy; 2023 - 2024 Lzh's Blog 许可协议: CC BY-NC-ND 4.0"
 
 nav:
   - index.md
   - "2024":
+    - "12":
+      - blog/2024/12/2.md
+      - blog/2024/12/1.md
     - "06":
       - blog/2024/06/2.md
       - blog/2024/06/1.md
-    - "02":
-      - blog/2024/02/4.md
-      - blog/2024/02/3.md
-      - blog/2024/02/2.md
-      - blog/2024/02/1.md
+    # - "02":
+      # - blog/2024/02/4.md
+      # - blog/2024/02/3.md
+      # - blog/2024/02/2.md
+      # - blog/2024/02/1.md
   - "2023":
     - "12":
       - blog/2023/12/1.md

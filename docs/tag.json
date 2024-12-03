@@ -60,6 +60,11 @@
         "color": "black"
     },
     {
+        "TagName": "Java",
+        "background": "sienna",
+        "color": "black"
+    },
+    {
         "TagName": "回忆录-2023",
         "background": "chartreuse",
         "color": "black"

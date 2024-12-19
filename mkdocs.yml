@@ -8,6 +8,7 @@ nav:
   - index.md
   - "2024":
     - "12":
+      - blog/2024/12/7.md
       - blog/2024/12/6.md
       - blog/2024/12/5.md
       - blog/2024/12/4.md
@@ -194,8 +195,7 @@ markdown_extensions:
 extra_javascript:
   - javascripts/extra.js
   - javascripts/mathjax/src/tex-chtml/tex-chtml.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml.min.js
 
 extra_css:
     - stylesheets/extra.css

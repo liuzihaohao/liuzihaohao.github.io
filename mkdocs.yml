@@ -6,6 +6,9 @@ copyright: "Copyright &copy; 2023 - 2024 Lzh's Blog 许可协议: CC BY-NC-ND 4.
 
 nav:
   - index.md
+  - "2025":
+    - "03":
+      - blog/2025/03/1.md
   - "2024":
     - "12":
       - blog/2024/12/8.md

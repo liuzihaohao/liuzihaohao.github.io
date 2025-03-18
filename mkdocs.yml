@@ -12,6 +12,7 @@ nav:
     - "Django Course":
       - blog/2025/django/1.intro.md
       - blog/2025/django/2.start.md
+      - blog/2025/django/3.intro_view_router.md
   - "2024":
     - "12":
       - blog/2024/12/8.md

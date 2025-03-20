@@ -8,6 +8,7 @@ nav:
   - index.md
   - "2025":
     - "03":
+      - blog/2025/03/2.md
       - blog/2025/03/1.md
     - "Django Course":
       - blog/2025/django/1.intro.md
